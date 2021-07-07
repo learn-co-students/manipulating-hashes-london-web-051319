@@ -1,3 +1,5 @@
+require "pry"
+
 def first_challenge
   contacts = {
     "Jon Snow" => {
@@ -15,8 +17,10 @@ def first_challenge
 
   #your code here
 
-
-  #remember to return your newly altered contacts hash!
-  contacts
+  # contacts["Freddy Mercury"][:favorite_icecream_flavors].delete_if {|x| x=="strawberry"} 
+  #single line command above, with variable below
+  var = contacts["Freddy Mercury"][:favorite_icecream_flavors] #tidier to name a variable then execute
+  var.delete_if {|x| x=="strawberry"}
+contacts # return amended hash.
 end
 
